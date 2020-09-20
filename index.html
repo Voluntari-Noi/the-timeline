@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon"  />
+
+<link rel="mask-icon" type="" color="#111" />
+
+
+  <title>Cronologie biblică</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://cdn.rawgit.com/AdventCoding/Timespace/e24e8fe6/css/jquery.timespace.light.css'>
+  
+<style>
+h1 {
+  text-align: center;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+ 
+	<h1>Evenimente importante din Biblie</h1>
+	<div id="timeline"></div>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdn.rawgit.com/AdventCoding/Timespace/e24e8fe6/jquery.timespace.js'></script>
+  
+      <script id="rendered-js" >
+$(function () {
+
+  $('#timeline').timespace({
+
+    timeType: 'date',
+    useTimeSuffix: false,
+    startTime: -500,
+    endTime: 2100,
+    markerIncrement: 50,
+    data: {
+      headings: [
+
+      { start: 500, end: 1750, title: 'Evul Mediu Intunecat' },
+      { start: 2020, title: 'Proiectul Pentru Cer'}
+      ],
+
+      events: [
+      { start: -100, end: -44, title: 'Gaius Iulius Caesar'},
+      { start: 1600, title: 'Event', noDetails: true },
+      { start: 1610, title: 'Event', noDetails: true },
+      { start: 1620, title: 'Event', noDetails: true },
+      { start: 1800, title: 'Event', noDetails: true },
+      { start: 1789, title: 'Revoluția Franceză' },
+      { start: 1914, end: 1918, title: 'Primul război mondial', noDetails: true },
+      { start: 1929, end: 1939, title: 'Great Depression',
+        description: 'A period of global economic downturn. Many experienced unemployment and the basest poverty.' },
+      {start: 2020,   title: 'Proiectul Pentru Cer', callback: function () {
+
+          this.container.find('.jqTimespaceDisplay section').append(
+          '<p>Pentru a afla detalii despre noi, '+
+          '<a target="_blank" href="https://pentrucer.net/despre/">apasă aici.</a></p>');
+
+  } }, ] } });
+
+
+
+
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
