@@ -1,3 +1,2 @@
 # the-timeline
-Bible chronology
-[Demo] (https://voluntari-noi.github.io/the-timeline/)
+Bible chronology https://voluntari-noi.github.io/the-timeline/
